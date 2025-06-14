@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+/* Global background for a playful feel */
+body {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  font-family: 'Comic Neue', Comic Sans MS, cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Header */
+.main-header {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #3f51b5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Two Panel Container */
+.two-panel-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 60vh;
+  gap: 32px;
+  padding: 32px;
+  flex-wrap: wrap;
+}
+
+/* Panel Card Styles */
+.panel-card {
+  flex: 1 1 320px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 400px;
+  padding: 2em;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Panel Margin */
+.text-panel {
+  margin-bottom: 16px;
+}
+
+/* Panel Title */
+.panel-title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #ff9800;
+  letter-spacing: 1px;
+}
+
+/* Story Text (Kindergarten Friendly) */
+.kindergarten-text {
+  font-size: 1.6rem;
+  color: #444;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Image Panel Centering */
+.image-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Playful Responsive Image with a crisp border */
+.responsive-img {
+  height: 100%;
+  border-radius: 16px;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fancy button styling with a bouncy hover effect */
+button[mat-raised-button] {
+  font-size: 1.6rem;
+  padding: 1em 1.5em;
+  border-radius: 16px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button[mat-raised-button]:hover {
+  transform: scale(1.1);
+  background-color: #303f9f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .main-header {
+    font-size: 2.2rem;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  .panel-card {
+    max-width: 100%;
+    flex: 1 1 100%;
+    height: auto;
+    padding: 1.5em;
+  }
+  .kindergarten-text {
+    font-size: 1.4rem;
+  }
+}

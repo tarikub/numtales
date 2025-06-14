@@ -1,0 +1,22 @@
+<h1 class="main-header">Welcome to NumTales</h1>
+<div class="two-panel-container">
+  <!-- Left Panel: Text -->
+  <mat-card class="panel-card text-panel">
+    <mat-card-title class="panel-title">{{startingStory}} - {{ story?.title}}</mat-card-title>
+    <mat-card-content>
+      <p class="kindergarten-text">
+        {{ story?.story || 'Discover the world of numbers through engaging stories. Click "Next" to explore more!' }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="nextDisabled" (click)="getNextStory()" mat-raised-button color="primary">Next</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <!-- Right Panel: Image -->
+  <mat-card class="panel-card image-panel">
+    <img [src]="image?.url || 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3RmbjJ4ZjJpOWxkZ2Y2a3RsbXVoOTY4MXI0OGVveGp6cW8wbGozeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RgzryV9nRCMHPVVXPV/giphy.gif'" alt="Sample" class="responsive-img" />
+  </mat-card>
+</div>
+
+<router-outlet />

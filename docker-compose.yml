@@ -1,0 +1,21 @@
+services:
+    numtales-api: 
+      image: numtales-api
+      build:
+            context: ./api    
+      ports:
+        - "5000:5000"  
+      environment:
+        - MONGODB_URI=[Your MongoDB URI]
+    front-end:
+      image: front-end
+      build:
+            context: ./front-end       
+      ports:
+            - "8000:8000"
+      depends_on:
+        - numtales-api
+      links:
+        - numtales-api
+networks: 
+  default: 
